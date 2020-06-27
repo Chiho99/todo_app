@@ -21,6 +21,7 @@
         <h1 style="text-align: center;">Sign in</h1>
         <div class="row mt-4 px-4">
             <div class="col-12">
+            <!-- ここからデータを保存 -->
                 <form action="signin.php" method="post">
                     <div class="form-group">
                         <input type="email" class="form-control" name="email" placeholder="email">
