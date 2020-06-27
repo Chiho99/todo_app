@@ -47,7 +47,12 @@ class Model
     }
 
     // * findById()を以下に追加する
-
+    public function findById($id){
+        $stmt = $this->db_manager->dbh->prepare('SELECT * FROM '. $this->table. ' WHERE id= ?');
+        $stmt->execute([$id]);
+        $task = $stmt->fetch();
+        return $task;
+    }
 
     
 
