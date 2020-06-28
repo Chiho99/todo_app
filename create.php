@@ -31,6 +31,10 @@
                         <textarea class="form-control" name="contents" id="contents" cols="30" rows="10"></textarea>
                     </div>
                     <div class="form-group">
+                        <label for="deadline">Deadline</label>
+                        <input type="date" name="deadline" id="deadline">
+                    </div>
+                    <div class="form-group">
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="image">
                             <label class="custom-file-label" for="image">Choose file</label>
