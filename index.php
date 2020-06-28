@@ -103,21 +103,14 @@ if (isset($_GET['title'])) {
                         <div class="card-body">
                             <h5 class="card-title"><?= h($task["title"]); ?></h5>
                             <p class="card-text"><?= h($task["contents"]); ?></p>
-                            <p class="deadline"><div>締め切り</div><span class="text-danger"><?= h($task["deadline"]); ?></p>
-                            <select>
-                                <option value="none">---</option>
-                                <option value="school">学校</option>
-                                <option value="assignment">課題</option>
-                                <option value="submit">提出物</option>
-                                <option value="shopping">買い物</>
-                                <option value="job">仕事</option>
-                               
-                            </select>
+                            <p class="deadline"><div>締め切り</div><span class="text-danger"><?= h($task["deadline"]); ?></p><br>
+                            <!-- 項目名 -->
+                            <p class="list text-primary"><?= h($task["list"]); ?></p>
                             <div class="text-right d-flex justify-content-end">
-                                <a href="edit.php?id=<?= h($task['id']); ?>" class="btn text-success">EDIT</a>
+                                <a href="edit.php?id=<?= h($task['id']); ?>" class="btn bg-success text-white">EDIT</a>
                                 <form action="delete.php" method="post">
                                     <input type="hidden" name="id" value="<?= h($task['id']); ?>">
-                                    <button type="submit" class="btn text-danger">DELETE</button>
+                                    <button type="submit" class="btn bg-danger text-white ml-2">DELETE</button>
                                 </form>
                             </div>
                         </div>
@@ -125,6 +118,7 @@ if (isset($_GET['title'])) {
                 </div>
             <?php endforeach; ?>
         </div>
-    </div>
+    </div> 
+    <script type="text/javascript" src="imgchange.js"></script>
 </body>
 </html>

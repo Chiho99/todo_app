@@ -18,12 +18,12 @@ class Task extends Model
         // PDOのインスタンス
         // prepareメソッドを実行
         // INSERT INTO (カラム名, ,) VALUES (値, 値, 値,)
-        $stmt = $this->db_manager->dbh->prepare('INSERT INTO ' . $this->table . ' (title, contents, created, deadline) VALUES (?, ?, ?, ?)');
+        $stmt = $this->db_manager->dbh->prepare('INSERT INTO ' . $this->table . ' (title, contents, created, deadline, list) VALUES (?, ?, ?, ?, ?)');
         $stmt->execute($data);
     }
     // * update()を以下に追加する
     public function update($data){
-        $stmt = $this->db_manager->dbh->prepare('UPDATE '. $this->table. ' SET title= ?, contents= ?, deadline= ? WHERE id= ?');
+        $stmt = $this->db_manager->dbh->prepare('UPDATE '. $this->table. ' SET title= ?, contents= ?, deadline= ?, list= ? WHERE id= ?');
         $stmt->execute($data);
     }
 

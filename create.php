@@ -35,6 +35,16 @@
                         <input type="date" name="deadline" id="deadline">
                     </div>
                     <div class="form-group">
+                        <label for="list"></label>
+                        <select name="list" id="list" class="active">
+                            <option value="">---</option>
+                            <option value="学校" class="school">学校</option>
+                            <option value="課題" class="assignment">課題</option>
+                            <option value="買い物" class="shopping">買い物</>
+                            <option value="仕事" class= "job">仕事</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="image">
                             <label class="custom-file-label" for="image">Choose file</label>
@@ -47,8 +57,7 @@
             </div>
         </div>
     </div>
-
-
+    <script type="text/javascript" src="imgchange.js"></script>
 </body>
 
 </html>
